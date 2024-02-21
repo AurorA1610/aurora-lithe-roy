@@ -41,23 +41,51 @@ nav.sticking {
   box-shadow: 0px 3px 12px 0px var(--text-color);
 }
 #logo-img {
-  width: 100%;
+  width: 72%;
 }
-nav ul {
+nav .hamburger {
+  width: 9%;
+  height: 24px;
+  right: 5%;
+  top: 36%;
+  z-index: 5;
+  background: transparent;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+}
+nav .hamburger span {
+  display: block;
+  background: #ca6f1e;
+  width: 100%;
+  height: 3px;
+  transition: 0.3s;
+  transition-property: transform, opacity;
+}
+nav .hamburger span:nth-child(2) {
+  margin: 20% 0px;
+}
+.nav-list {
   width: 100%;
   text-align: right;
   list-style: none;
   margin-right: 50px;
 }
-nav ul li {
+.nav-list li {
   display: inline-block;
   margin: 5px 15px;
 }
-nav ul li a {
+.nav-list li a {
   color: var(--text-color);
   font-weight: 500;
+  display: inline-block;
+  font-size: 18px;
 }
-.toggle-btn {
+.nav-list li:not(:last-child) a:hover {
+  color: #ca6f1e;
+  transition: 0.4s;
+}
+#toggle-btn {
   background: #ca6f1e;
   color: #fff;
   display: flex;
@@ -65,10 +93,12 @@ nav ul li a {
   justify-content: center;
   width: 150px;
   height: 40px;
+  font-size: 18px;
   border-radius: 20px;
   cursor: pointer;
+  border: none;
 }
-.toggle-btn i {
+#toggle-btn i {
   margin-left: 10px;
 }
 .header-content,
@@ -292,13 +322,145 @@ footer {
   font-size: 13px;
 }
 
-/* Responsiveness */
+/*........***..**.........**.......***...... Responsiveness ........***..**.........**.......***......*/
+
+/* mobile devices */
+@media screen and (max-width: 600px) {
+  nav .hamburger {
+    display: initial;
+  }
+  .click {
+    top: 46px;
+  }
+  .click span {
+    position: absolute;
+    margin-top: 12px;
+  }
+  .click span:first-child {
+    transform: rotate(-40deg);
+  }
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+  .click span:last-child {
+    transform: rotate(40deg);
+    top: 0;
+  }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: -65%;
+    bottom: 0;
+    width: 60%;
+    height: 598%;
+    background: var(--title-color);
+    z-index: 2;
+    padding: 6% 9%;
+    transition: 0.3s right;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  .nav-list li {
+    display: block;
+  }
+  .nav-list li a {
+    display: block;
+    color: var(--background-color);
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .nav-list li:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-list.open {
+    right: 0;
+  }
+  .header-content {
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin: 24% 0% 2%;
+  }
+  .header-text {
+    max-width: 312px;
+    margin-top: 24px;
+  }
+  .header-text h2 {
+    font-size: 26px;
+  }
+  .header-text h1 {
+    font-size: 33px;
+  }
+  .img-box {
+    width: 72%;
+    margin-left: 0;
+  }
+  .projects-contents,
+  .certificates-contents {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 /* tablet devices  */
 @media screen and (min-width: 601px) and (max-width: 1021px) {
+  nav .hamburger {
+    display: initial;
+  }
+  .click {
+    top: 46px;
+  }
+  .click span {
+    position: absolute;
+    margin-top: 12px;
+  }
+  .click span:first-child {
+    transform: rotate(-40deg);
+  }
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+  .click span:last-child {
+    transform: rotate(40deg);
+    top: 0;
+  }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: -65%;
+    bottom: 0;
+    width: 40%;
+    height: 598%;
+    background: var(--title-color);
+    z-index: 2;
+    padding: 6% 9%;
+    transition: 0.3s right;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  .nav-list li {
+    display: block;
+  }
+  .nav-list li a {
+    display: block;
+    color: var(--background-color);
+    text-align: center;
+    margin-left: 0;
+    margin-bottom: 40px;
+  }
+  .nav-list li:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-list.open {
+    right: 0;
+  }
   .header-content {
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
+    margin: 18% 0% 2%;
   }
   .header-text {
     max-width: 504px;
@@ -319,29 +481,62 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-/* mobile devices */
-@media screen and (max-width: 600px) {
-  .header-content {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+/* really big screen tabs  */
+@media screen and (min-width: 1022px) and (max-width: 1280px) {
+  nav .hamburger {
+    display: initial;
+    width: 6%;
   }
-  .header-text {
-    max-width: 312px;
-    margin-top: 24px;
+  .click {
+    top: 46px;
   }
-  .header-text h2 {
-    font-size: 26px;
+  .click span {
+    position: absolute;
+    margin-top: 12px;
   }
-  .header-text h1 {
-    font-size: 33px;
+  .click span:first-child {
+    transform: rotate(-40deg);
   }
-  .img-box {
-    width: 72%;
+  .click span:nth-child(2) {
+    opacity: 0;
+    margin: 0;
+  }
+  .click span:last-child {
+    transform: rotate(40deg);
+    top: 0;
+  }
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: -65%;
+    bottom: 0;
+    width: 36%;
+    height: 598%;
+    background: var(--title-color);
+    z-index: 2;
+    padding: 6% 9%;
+    transition: 0.3s right;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  .nav-list li {
+    display: block;
+  }
+  .nav-list li a {
+    display: block;
+    color: var(--background-color);
+    text-align: center;
     margin-left: 0;
+    margin-bottom: 40px;
   }
-  .projects-contents,
-  .certificates-contents {
-    grid-template-columns: repeat(1, 1fr);
+  .nav-list li:last-child {
+    display: flex;
+    justify-content: center;
+  }
+  .nav-list.open {
+    right: 0;
+  }
+  .header-content {
+    margin: 12% 0% 2%;
   }
 }

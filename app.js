@@ -27,3 +27,14 @@ const navObserver = new IntersectionObserver((entries) => {
   nav.classList.toggle("sticking", !entries[0].isIntersecting);
 });
 navObserver.observe(scrollWatcher);
+
+
+// ...................... nav responsiveness .....................
+var navSmall = document.querySelector(".hamburger");
+var navList = document.querySelector(".nav-list");
+var links = document.querySelector(".nav-list li");
+
+navSmall.addEventListener("click", function () {
+  this.classList.toggle("click");
+  navList.classList.toggle("open");
+});
