@@ -236,6 +236,7 @@ main {
 .certificate-box a img {
   width: 100%;
   display: block;
+  height: 200px;
 }
 .project-details {
   padding: 20px;
