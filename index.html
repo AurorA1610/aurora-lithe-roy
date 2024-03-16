@@ -46,7 +46,7 @@
       <div class="header-content" id="about-me">
         <div class="header-text">
           <h2>Hello, World!</h2>
-          <h1><span>I'm</span> Aurora Lithe Roy</h1>
+          <h1><span>I'm</span> <span class="typing-text"></span></h1>
           <p>
             My venture into the tech realm sparked from an inquisitive dive into
             coding intricacies. I'm captivated by the magic of HTML, CSS, and
@@ -367,6 +367,21 @@
     </footer>
 
     <script src="app.js"></script>
+
+    <!-- ************* Typing Text ************* -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".typing-text", {
+        strings: [
+          "Aurora Lithe Roy.",
+          "a Web Developer.",
+          "a Technical Writer.",
+        ],
+        typeSpeed: 70,
+        backSpeed: 60,
+        loop: true,
+      });
+    </script>
   </body>
 </html>
 

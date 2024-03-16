@@ -28,7 +28,6 @@ const navObserver = new IntersectionObserver((entries) => {
 });
 navObserver.observe(scrollWatcher);
 
-
 // ...................... nav responsiveness .....................
 var navSmall = document.querySelector(".hamburger");
 var navList = document.querySelector(".nav-list");
