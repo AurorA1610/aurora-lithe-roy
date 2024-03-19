@@ -8,16 +8,20 @@
       content="Aurora Lithe Roy, Aurora Roy, portfolio, personal website, aurora roy, aurora lithe roy"
     />
     <title>Aurora Lithe Roy</title>
+    <!-- my custom css  -->
     <link rel="stylesheet" href="style.css" />
+    <!-- font awesome  -->
     <script
       src="https://kit.fontawesome.com/5098dc10ba.js"
       crossorigin="anonymous"
     ></script>
+    <!-- animate on scroll (aos) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
       <!-- *************  navigation starts ************* -->
-      <nav>
+      <nav data-aos="fade-down">
         <a href="#">
           <img src="images/logo-light.png" id="logo-img" />
         </a>
@@ -43,7 +47,7 @@
       <!-- *************  navigation ends ************* -->
 
       <!-- *************  about me starts ************* -->
-      <div class="header-content" id="about-me">
+      <div class="header-content" id="about-me" data-aos="fade-in">
         <div class="header-text">
           <h2>Hello, World!</h2>
           <h1><span>I'm</span> <span class="typing-text"></span></h1>
@@ -90,10 +94,10 @@
 
     <main>
       <!-- *************  education starts ************* -->
-      <section class="container" id="education">
+      <section class="container" id="education" data-aos="fade-in">
         <h2 class="sec-title">Educational backgrounds</h2>
         <div class="education-contents">
-          <div class="education-box">
+          <div class="education-box" data-aos="fade-right">
             <h4>2019-2023</h4>
             <h3>Bachelor of Technology in Computer Science and Engineering</h3>
             <h5>
@@ -107,7 +111,7 @@
             </p>
             <p>GPA: 9.03 / 10.00</p>
           </div>
-          <div class="education-box">
+          <div class="education-box" data-aos="fade-right">
             <h4>2016-2018</h4>
             <h3>Higher Secondary Certificate</h3>
             <h5>
@@ -119,7 +123,7 @@
             </p>
             <p>GPA: 5.00 / 5.00</p>
           </div>
-          <div class="education-box">
+          <div class="education-box" data-aos="fade-right">
             <h4>2014-2016</h4>
             <h3>Secondary School Certificate</h3>
             <h5>
@@ -135,10 +139,10 @@
       </section>
       <!-- *************  education ends ************* -->
       <!-- *************  projects starts ************* -->
-      <section class="container" id="projects">
+      <section class="container" id="projects" data-aos="fade-in">
         <h2 class="sec-title">Projects</h2>
         <div class="projects-contents">
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/influencer-products.png" alt="" />
             <div class="project-details">
               <h3>Influencer products</h3>
@@ -157,7 +161,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/hotstar.png" alt="" />
             <div class="project-details">
               <h3>Disney Hotstar clone</h3>
@@ -176,7 +180,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/honda.png" alt="" />
             <div class="project-details">
               <h3>Bike shop</h3>
@@ -198,7 +202,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/leader-board.png" alt="" />
             <div class="project-details">
               <h3>Leader Board</h3>
@@ -217,7 +221,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/insight-nest.png" alt="" />
             <div class="project-details">
               <h3>Insight Nest</h3>
@@ -237,7 +241,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/save-cart-to-local-storage.png" alt="" />
             <div class="project-details">
               <h3>Saving Shopping Cart to Local Storage</h3>
@@ -261,7 +265,7 @@
               </a>
             </div>
           </div>
-          <div class="project-box">
+          <div class="project-box" data-aos="fade-in">
             <img src="images/projects/study_help.png" alt="" />
             <div class="project-details">
               <h3>Study Materials</h3>
@@ -298,7 +302,7 @@
       </section>
       <!-- *************  projects ends ************* -->
       <!-- *************  certifications starts ************* -->
-      <section class="container" id="certificates">
+      <section class="container" id="certificates" data-aos="fade-in">
         <h2 class="sec-title">Certifications</h2>
         <div class="certificates-contents">
           <div class="certificate-box">
@@ -327,7 +331,7 @@
       <!-- *************  certifications ends ************* -->
     </main>
 
-    <footer>
+    <footer data-aos="fade-up">
       <div id="contact">
         <h2>Let's get in touch</h2>
         <div class="social">
@@ -366,8 +370,8 @@
       <p class="copyright">© Aurora, 2024 - All Rights Reserved</p>
     </footer>
 
+    <!-- my custom js -->
     <script src="app.js"></script>
-
     <!-- ************* Typing Text ************* -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
@@ -381,6 +385,11 @@
         backSpeed: 60,
         loop: true,
       });
+    </script>
+    <!-- animate on scroll (aos) -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 2400, once: true });
     </script>
   </body>
 </html>
